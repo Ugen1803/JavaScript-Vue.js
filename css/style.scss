@@ -1,0 +1,79 @@
+/* переменные (свойсво, применяемое к элементам)*/
+
+/* Корпоративный цвет сайта */
+// $main_color: #f16d7f;
+
+/* Цвет тени блоков */
+// $box_shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+/* Максимальные разрешения при адаптации сайта на мобильных устройствах */
+$tablet_breakpoint: 1180px;
+$phone_breakpoint: 768px;
+
+// примеси (группа свойств, которые применяются к элементам)
+@mixin list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Общая часть для всех блоков */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  /* desktop */
+  // outline: 1px solid black;
+  margin: 0 auto;
+  width: 1140px; // ширина для десктопа по макету
+  /* tablet */
+  // +40px для перестроения адаптива = 1180px
+  @media (max-width: $tablet_breakpoint) {
+    width: 736px; // ширина для планшета по макету
+  }
+  /* phone */
+  // +32px для перестроения адаптива = 768px
+  @media (max-width: $phone_breakpoint) {
+    width: 360px; // ширина для планшета по макету
+  }
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -99999px;
+  margin: -1px;
+}
+
+/* Главная страница сайта */
+
+/* Шапка и меню сайта */
+@import "blocks/header";
+
+/* Раздел Каталога товаров Главная */
+@import "blocks/index/productsIndex";
+
+/* Раздел подвал сайта */
+@import "blocks/footer";

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* переменные (свойсво, применяемое к элементам)*/
+/* Корпоративный цвет сайта */
+/* Цвет тени блоков */
+/* Максимальные разрешения при адаптации сайта на мобильных устройствах */
+/* Общая часть для всех блоков */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  /* desktop */
+  margin: 0 auto;
+  width: 1140px;
+  /* tablet */
+  /* phone */
+}
+@media (max-width: 1180px) {
+  .container {
+    width: 736px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 360px;
+  }
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -99999px;
+  margin: -1px;
+}
+
+/* Главная страница сайта */
+/* Шапка и меню сайта */
+/* Шапка и меню сайта */
+.header {
+  background-color: #222222;
+}
+
+.cartButtonWrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cartButton {
+  margin: 10px 25px 10px 0;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 0;
+  outline: 1px solid red;
+}
+
+/* Раздел Каталога товаров Главная */
+/* Раздел Каталога товаров Главная */
+.main {
+  background-color: bisque;
+}
+
+.goodsList {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.goodsItemWrap {
+  list-style-type: none;
+  height: 350px;
+  width: 250px;
+  outline: 1px solid black;
+  margin: 100px 0;
+}
+
+.goodsImgWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.goodsImg {
+  width: 95%;
+  height: 200px;
+  margin: 5px;
+}
+
+.goodsImgImg {
+  width: 100%;
+  height: 100%;
+  outline: 1px solid black;
+  padding: 5px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.goodsDescription {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.goodsButtonWrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px 15px 10px 0;
+}
+
+.goodsButton {
+  border: 0;
+  outline: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+/* Раздел подвал сайта */
+/* Раздел подвал сайта */
+.footer {
+  background-color: #222222;
+  color: #fff;
+}
+.footerText {
+  padding: 20px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
