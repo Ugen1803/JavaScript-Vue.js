@@ -132,6 +132,10 @@ body {
   border-radius: 15px;
 }
 
+.calculatePrice {
+  text-align: right;
+}
+
 /* Раздел подвал сайта */
 /* Раздел подвал сайта */
 .footer {
