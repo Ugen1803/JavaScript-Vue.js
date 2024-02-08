@@ -1,0 +1,15 @@
+/* Раздел подвал сайта */
+
+.footer {
+  // height: 79px;
+  background-color: #222222;
+  color: #fff;
+  @media (max-width: $phone_breakpoint) {
+    // height: 143px;
+  }
+}
+
+.footerText {
+  padding: 20px;
+  text-align: center;
+}
