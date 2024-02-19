@@ -8,13 +8,8 @@ const goodsBasketItemsURL =
 
 // Метод получения данных с сервера:
 const getFromServer = (url) =>
-  new Promise((resolve) => {
-    const xhr = new XMLHttpRequest(); // Создание запроса на сервер
-    xhr.open("GET", url); // Записываются метод запроса и url сервера данных
-    xhr.send(); // Отсылается запрос на сервер
-    xhr.onload = () => {
-      resolve(JSON.parse(xhr.response)); // Ответ сервера в виде строки и формата JSON, далее он парсится из строки в объект
-    };
+  fetch(url).then((res) => {
+    return res.json();
   });
 
 // Объект Элемент товара:
